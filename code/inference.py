@@ -38,7 +38,7 @@ def decode_video(path):
     
     print("avant la methode videofileclip")
     #cap = cv2.VideoCapture(path)
-    clip = VideoFileClip(path, target_resolution=(30,30))
+    clip = VideoFileClip(path, target_resolution=(100,100))
     duree = clip.duration
     fps = clip.fps
     nb_frames = fps*duree
