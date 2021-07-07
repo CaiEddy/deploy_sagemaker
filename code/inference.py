@@ -134,13 +134,13 @@ def input_handler(data, context):
     url = d[1:-1]
     r = requests.get(url, allow_redirects=True)
 
-    with open("toto.webm", 'wb') as f:
+    with open("toto.mp4", 'wb') as f:
         for chunk in r.iter_content(chunk_size = 1024*1024):
             if chunk:
                 f.write(chunk)
     
     print("ON EST SORTI DE INPUT HANDLER")
-    return decode_video("toto.webm")
+    return decode_video("toto.mp4")
 
 
 #mapping predicted Encoded values to labels
